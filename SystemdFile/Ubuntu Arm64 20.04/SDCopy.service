@@ -1,0 +1,14 @@
+[Unit]
+Description=RPi SDCopy Agent
+
+[Service]
+EnvironmentFile=/boot/firmware/SDCopy.env
+ExecStart=/usr/bin/SDCopy
+Restart=always
+RestartSec=5
+KillMode=process
+KillSignal=SIGINT
+User=root
+
+[Install]
+WantedBy=multi-user.target
