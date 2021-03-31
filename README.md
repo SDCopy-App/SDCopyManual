@@ -38,13 +38,13 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
 1. (For Ubuntu) Install RaspberryPi library: ```apt install libraspberrypi-bin```
 1. (For PiOS) Enable SPI: use ```raspi-config```, or add ```dtparam=spi=on``` at the bottom of ```/boot/config.txt```. A reboot is required.
 1. Copy the right version of ```SDCopy``` to ```/usr/bin/```.
-1. Run command ```sudo chmod +x /usr/bin/SDCopy```.
+1. Run command: ```sudo chmod +x /usr/bin/SDCopy```
 1. Copy your own ```SDCopy.lic``` to ```/etc/```.
 1. Copy the right version of ```SDCopy.env``` to ```/etc/```, ```/boot``` or ```/boot/firmware/```.
 1. Copy the right version of ```SDCopy.service``` which matched with the location of ```SDCopy.env``` to ```/etc/systemd/system```.
-1. Run command ```sudo systemctl daemon-reload```.
+1. Run command: ```sudo systemctl daemon-reload```
 1. (Optional) Run command ```sudo systemctl enable SDCopy.service``` to set the app start while booting.
-1. Run command ```sudo systemctl start SDCopy.service``` to start the app.
+1. Run command to start the app: ```sudo systemctl start SDCopy.service```
 
 ### Enviroment File
 [EnvironmentFile](EnvironmentFile) folder contains the environment file and the description of all variables.
