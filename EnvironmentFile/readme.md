@@ -62,13 +62,10 @@ UpdateBand|Band of the app while updating. For PiOS 10, use ```PiOS_arm32_10```;
 
 # Setting
 
-Variable settings will be read while SDCopy starting. Values can be set in these ways, ordered by priority:
+Variable settings will be read while SDCopy starting. Values can be set in these ways:
 
-1. Environment set in SDCopy.service, after EnvironmentFile lines.
-2. Environment file named as SDCopy.env, placed in /boot/firmware/. The folder is the default mapping point of the boot partition of Ubuntu Arm64 20.04.
-3. Environment file named as SDCopy.env, placed in /boot/. The folder is the default mapping point of the boot partition of PiOS Arm32 10.
-4. Environment file named as SDCopy.env, placed in /etc/.
-5. Environment set in SDCopy.service, before EnvironmentFile lines.
-6. Environment set in system.
+1. Environment file named as SDCopy.env, placed in /boot/firmware/. The folder is the default mapping point of the boot partition of Ubuntu Arm64 20.04. Use [this systemd](SystemdFile/Ubuntu%20Arm64%2020.04/SDCopy.service) file.
+2. Environment file named as SDCopy.env, placed in /boot/. The folder is the default mapping point of the boot partition of PiOS Arm32 10. Use [this systemd](SystemdFile/PiOS%20Arm32%2010/SDCopy.service) file.
+3. Environment file named as SDCopy.env, placed in /etc/. Use [this systemd](SystemdFile/etc/SDCopy.service) file.
 
-For the convenience of end users to edit, 2 and 3 are recommended for pre-made images. 4 is a good way for advanced user who install the app manually.
+For the convenience of end users to edit, 1 and 2 are recommended for pre-made images. 3 is a good way for advanced user who install the app manually.
