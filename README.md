@@ -1,2 +1,3 @@
-# SDCopyManual
-The manual of SDCopy
+# SDCopy Manual
+
+This repo contains the tech file of SDCopy to be viewed publicly.
