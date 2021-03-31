@@ -53,7 +53,7 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
 
 # Steps to prepare the target disk
 
-1. Format the disk with supported file system, like exFat.
+1. Format the disk with supported file system, like exFAT.
 1. Put a folder in disk named ```Target```.
 
 ## Warning
