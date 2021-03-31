@@ -3,8 +3,8 @@ Description=RPi SDCopy Agent
 
 [Service]
 EnvironmentFile=/etc/SDCopy.env
-EnvironmentFile=/boot/SDCopy.env
-EnvironmentFile=/boot/firmware/SDCopy.env
+# EnvironmentFile=/boot/SDCopy.env
+# EnvironmentFile=/boot/firmware/SDCopy.env
 ExecStart=/usr/bin/SDCopy
 Restart=always
 RestartSec=5
