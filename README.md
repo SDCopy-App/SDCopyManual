@@ -22,7 +22,7 @@ Currently, SDCopy supports PiOS 10 (32-bit) and Ubuntu 20.04 LTS (64-bit) on Ras
 
 1. Use tool to write image to TF card.
 1. Place the license file to the 1st partition as ```SDCopyLicense.txt```.
-1. Place the wifi config file if required. See example for (Ubuntu)[https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet or (PiOS)[https://www.raspberrypi.org/documentation/configuration/wireless/headless.md].
+1. Place the wifi config file if required. See example for [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) or [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md).
 1. Eject the TF card.
 1. Boot Raspberry Pi with the TF card.
 1. (For Ubuntu) Default user name is ```ubuntu```, with password ```ubuntu```. When login first time, changing password is required.
