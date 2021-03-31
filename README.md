@@ -58,14 +58,17 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
 
 ## Warning
 
-We found some highend disks, like [Sandisk E81](https://shop.westerndigital.com/products/portable-drives/sandisk-extreme-pro-usb-3-2-ssd), cannot work with Raspberry Pi, including PiOs and Ubuntu. The file system of the target will be destroyed when writing files to an unsupported disk. Do a test copy before use it is hightly recommended.
+We found some highend disks, like [Sandisk Extreme Pro Portable SSD (E81)](https://shop.westerndigital.com/products/portable-drives/sandisk-extreme-pro-usb-3-2-ssd), cannot work with Raspberry Pi, including PiOs and Ubuntu. The file system of the target will be destroyed when writing files to an unsupported disk. Do a test copy before use it is hightly recommended.
 
 # Ejecting disks
 
-While scanning, copying (including the cancel confirming) and deleting, do not eject the disks operating.
-It's ok to unplug the source disk / SD card reader / SD card directly before source scanning, after copying and after deletion.
-It's ok to unplug the target disk before target scanning, after copying and after deletion.
-In other cases, unplugging the disk directly will not damage the files in the device, but may cause the copying or deletion process to be unable to continue.
+* While scanning, copying (including the cancel confirming) and deleting, do not eject the disks operating.
+
+* It's ok to unplug the source disk / SD card reader / SD card directly before source scanning, after copying and after deletion.
+
+* It's ok to unplug the target disk before target scanning, after copying and after deletion.
+
+* In other cases, unplugging the disk directly will not damage the files in the device, but may cause the copying or deletion process to be unable to continue.
 
 # Flow
 [Flow](Flow) folder contains the work flow description of SDCopy app, in png and Visio format.
