@@ -41,7 +41,7 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
 1. Run command ```sudo chmod +x /usr/bin/SDCopy```.
 1. Copy your own ```SDCopy.lic``` to ```/etc/```.
 1. Copy the right version of ```SDCopy.env``` to ```/etc/```, ```/boot``` or ```/boot/firmware/```.
-1. Copy ```SDCopy.service``` to ```/etc/systemd/system```.
+1. Copy the right version of ```SDCopy.service``` which matched with the location of ```SDCopy.env``` to ```/etc/systemd/system```.
 1. Run command ```sudo systemctl daemon-reload```.
 1. (Optional) Run command ```sudo systemctl enable SDCopy.service``` to set the app start while booting.
 1. Run command ```sudo systemctl start SDCopy.service``` to start the app.
