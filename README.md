@@ -10,7 +10,7 @@ This repo contains the tech file of SDCopy to be viewed publicly.
 1. When update package sent, one email will be sent to the licence owner and a record will be kept on our server.
 1. If you beleave that your license is lost or stolen, contact support desk to change to a new one.
 1. The log kept on our server will not be transferred to any people or group other than SDCopy development team.
-1. We reserve the right to check the log frequently to identify and deactivate the license used in violation.
+3. We reserve the right to check the log frequently to identify and deactivate the license used in violation.
 
 # Supported OS
 
@@ -21,6 +21,7 @@ Currently, SDCopy supports PiOS 10 (32-bit) and Ubuntu 20.04 LTS (64-bit) on Ras
 ## Steps to install using pre-built image
 
 1. Use tool to write image to TF card.
+1. Eject and replug the TF card.
 1. Place the license file to the 1st partition as ```SDCopyLicense.txt```.
 1. Place the wifi config file if required. See example for [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) or [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md).
 1. Eject the TF card.
