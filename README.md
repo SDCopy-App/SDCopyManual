@@ -24,12 +24,14 @@ Currently, SDCopy supports PiOS 10 (32-bit) and Ubuntu 20.04 LTS (64-bit) on Ras
 1. Eject and replug the TF card.
 1. Place the license file to the 1st partition as ```SDCopyLicense.txt```.
 1. Place the wifi config file if required. While booting, if the file exists, existing network setting will be overwritten from this file, and the file will be removed after that.
-  * PiOS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details.
-  * Ubuntu: Place a file ```netplan.yaml``` in the first partition. Check [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) for references. NOTE: File name is different from the official guide.
+  1. PiOS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details.
+  1. Ubuntu: Place a file ```netplan.yaml``` in the first partition. Check [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) for references. NOTE: File name is different from the official guide.
 1. Eject the TF card.
 1. Boot Raspberry Pi with the TF card.
-1. (For Ubuntu) Default user name is ```ubuntu```, with password ```ubuntu```.
-1. (For PiOS) Default user name is ```pi```, with password ```raspberry```.
+
+Default user and password:
+* (For Ubuntu) Default user name is ```ubuntu```, with password ```ubuntu```.
+* (For PiOS) Default user name is ```pi```, with password ```raspberry```.
 
 When required, edit the ```SDCopy.env```, which is a text file, placed in the 1st partition of the TF card. Check [EnvironmentFile](EnvironmentFile) folder for details.
 The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd partition form Windows.
