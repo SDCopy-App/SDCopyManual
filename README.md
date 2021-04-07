@@ -24,8 +24,8 @@ Currently, SDCopy supports PiOS 10 (32-bit) and Ubuntu 20.04 LTS (64-bit) on Ras
 1. Eject and replug the TF card.
 1. Place the license file to the 1st partition as ```SDCopyLicense.txt```.
 1. Place the wifi config file if required. While booting, if the file exists, existing network setting will be overwritten from this file, and the file will be removed after that.
-   1. PiOS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details.
-   1. Ubuntu: Place a file ```netplan.yaml``` in the first partition. Check [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) for references. NOTE: File name is different from the official guide.
+   1. For PiOS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details.
+   1. For Ubuntu: Place a file ```netplan.yaml``` in the first partition. Check [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) for references. **Note: File name is different from the official guide.**
 1. Eject the TF card.
 1. Boot Raspberry Pi with the TF card.
 
