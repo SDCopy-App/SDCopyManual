@@ -46,6 +46,14 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
 1. (Optional) Run command to set the app start with booting: ```sudo systemctl enable SDCopy.service```
 1. Run command to start the app: ```sudo systemctl start SDCopy.service```
 
+(For Ubuntu) If you want to apply netplan from boot partition, like PiOS, while booting:
+
+1. Copy ```NetplanCopy.sh``` to ```/etc/```.
+1. Run command ```sudo chmod +x /etc/NetplanCopy.sh```.
+1. Copy ```NetplanCopy.service``` to ```/etc/systemd/system```.
+1. Run command ```sudo systemctl daemon-reload```.
+1. Run command ```sudo systemctl enable NetplanCopy.service``` to set the service start while booting.
+
 ### Enviroment File
 [EnvironmentFile](EnvironmentFile) folder contains the environment file and the description of all variables.
 
