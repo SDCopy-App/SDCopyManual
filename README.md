@@ -32,7 +32,7 @@ Currently, SDCopy supports PiOS 10 (32-bit) and Ubuntu 20.04 LTS (64-bit) on Ras
 Note: While first booting, the partition is resized to fill to the TF card. A reboot may be triggered automatically.
 
 When required, edit the ```SDCopy.env```, which is a text file, placed in the 1st partition of the TF card. Check [EnvironmentFile](EnvironmentFile) folder for details.
-The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd partition form Windows.
+The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd partition.
 
 ### Default user and password
 * (For Ubuntu) Default user name is ```ubuntu```, with password ```ubuntu```.
