@@ -29,12 +29,12 @@ Currently, SDCopy supports PiOS 10 (32-bit) and Ubuntu 20.04 LTS (64-bit) on Ras
 1. Eject the TF card.
 1. Boot Raspberry Pi with the TF card.
 
+When required, edit the ```SDCopy.env```, which is a text file, placed in the 1st partition of the TF card. Check [EnvironmentFile](EnvironmentFile) folder for details.
+The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd partition form Windows.
+
 ### Default user and password
 * (For Ubuntu) Default user name is ```ubuntu```, with password ```ubuntu```.
 * (For PiOS) Default user name is ```pi```, with password ```raspberry```.
-
-When required, edit the ```SDCopy.env```, which is a text file, placed in the 1st partition of the TF card. Check [EnvironmentFile](EnvironmentFile) folder for details.
-The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd partition form Windows.
 
 ## Steps to install this app manually
 
