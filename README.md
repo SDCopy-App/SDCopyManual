@@ -29,7 +29,7 @@ Currently, SDCopy supports PiOS 10 (32-bit) and Ubuntu 20.04 LTS (64-bit) on Ras
 1. Eject the TF card.
 1. Boot Raspberry Pi with the TF card.
 
-Default user and password:
+### Default user and password
 * (For Ubuntu) Default user name is ```ubuntu```, with password ```ubuntu```.
 * (For PiOS) Default user name is ```pi```, with password ```raspberry```.
 
