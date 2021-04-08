@@ -56,7 +56,7 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
 
 1. Copy ```NetplanCopy.sh``` to ```/etc/```.
 1. Run command ```sudo chmod +x /etc/NetplanCopy.sh```.
-1. Copy ```NetplanCopy.service``` to ```/etc/systemd/system```.
+1. Copy ```NetplanCopy.service``` to ```/etc/systemd/system/```.
 1. Run command ```sudo systemctl daemon-reload```.
 1. Run command ```sudo systemctl enable NetplanCopy.service``` to set the service start while booting.
 
