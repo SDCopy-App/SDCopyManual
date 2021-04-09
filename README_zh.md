@@ -70,3 +70,16 @@
 
 ## 注意
 
+我们发现部分高端移动硬盘， 例如[Sandisk Extreme Pro Portable SSD (E81)](https://shop.westerndigital.com/products/portable-drives/sandisk-extreme-pro-usb-3-2-ssd)，在 PiOS 与 Ubuntu 系统下均无法正常工作。尝试向不兼容的移动硬盘写入数据将可能导致移动硬盘文件系统损坏。我们建议在使用之前对硬盘进行写入测试。
+
+# 弹出硬盘
+
+* 在扫描硬盘，拷贝数据 (在确认取消拷贝之前) 或删除数据过程中，请勿移除硬盘，这可能导致硬盘文件系统损坏。
+
+* 在扫描硬盘之前或拷贝/删除数据完毕之后，您可以直接移除源存储设备或目标存储设备。
+
+* 在其余情况下，直接移除硬盘并不会损坏硬盘内的文件，但可能导致无法继续拷贝或删除。
+
+# 程序流程
+
+[Flow](Flow) 文件夹包含有 SDCopy png 格式及 Visio 格式的工作流程描述。
