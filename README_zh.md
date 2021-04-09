@@ -24,8 +24,8 @@
 2. 弹出并重新插入 Micro SD 存储卡。
 3. 将注册码文件保存于 Micro SD 存储卡的第一个分区，并命名为 ```SDCopyLicense.txt```
 4. (可选) 将 Wi-Fi 配置文件保存与 Micro SD 存储卡的第一个分区。在每次开机过程中，若系统检测到存在配置文件，现有的 Wi-Fi 设置将会被配置文件的内容覆盖，覆盖后配置文件将会被删除。
-   1. 对于 PiOS 系统：参考 [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) 的配置方式，将文件名为 ```wpa_supplicant.conf``` 的网络配置文件存入 Micro SD 存储卡第一个分区。
-   2. 对于 Ubuntu 系统: 参考 [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) 的配置方式，将文件名为 ```netplan.yaml``` 的网络配置文件存入 Micro SD 存储卡第一个分区。**注意：此步骤配置文件名与官方文档不同。**
+   1. 对于 PiOS Lite 系统：参考 [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) 的配置方式，将文件名为 ```wpa_supplicant.conf``` 的网络配置文件存入 Micro SD 存储卡第一个分区。
+   2. 对于 Ubuntu arm64 系统: 参考 [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) 的配置方式，将文件名为 ```netplan.yaml``` 的网络配置文件存入 Micro SD 存储卡第一个分区。**注意：此步骤配置文件名与官方文档不同。**
 5. 弹出 Micro SD 存储卡。
 6. 使用 Micro SD 存储卡启动树莓派。
 
