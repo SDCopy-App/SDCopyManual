@@ -2,6 +2,50 @@
 
 This repo contains the tech file of SDCopy to be viewed publicly.
 
+# Functions
+## Main functions
+1. Copy files from source to target.
+   1. Auto detect source based on folder matching.
+   1. Auto detect target based on folder matching.
+   1. Source subfolders / files filter to exclude subfolders / files from copying.
+   1. Target subfolder auto naming, manual naming and selecting.
+   1. Overwrite or resume when target subfolder exists.
+   1. Copying files with progress, speed and left time displayed.
+   1. Allow to delete source folder after all files copied successfully.
+1. Clean source.
+   1. Auto detect source based on folder matching.
+   1. Delete all subfolders and files from source folder.
+1. Delete target subfolder.
+   1. Auto detect target based on folder matching.
+   1. Select one subfolder under target folder.
+   1. Delete the subfolder specified with all subfolders and files.
+
+## Helpers
+1. Network
+   1. Check all IPv4 addresses.
+   1. Check all known SSID.
+   1. Add new SSID, allow open SSID (no password) or WPA-PSK protected SSID (with password).
+   1. Remove SSID.
+   1. Restart Wifi Service.
+1. Date and Time
+   1. Check current date and time.
+   1. Set date and time manually.
+   1. Set NTP on or off.
+   1. Check and set the time zone.
+1. Overlay File System (PiOS only)
+   1. Check and change the status of Overlay File System.
+   1. Check and change the status of Boot partition mounting mode (read-only or read-write).
+   1. Do not allow to change system files and update SDCopy when Overlay File System is enabled.
+
+## Additional
+1. Hardware status monitoring
+   1. Check and display whether the Raspberry Pi hardware is under-voltage, frequency capped, throttled and over heated.
+   1. Prompt when Raspberry Pi hardware was under-voltage, frequency capped, throttled and over heated since last boot.
+   1. Do not allow to start changing file system, like copying or deleting, when under-voltage to avoid disk corruption.
+1. Allow user to change almost all settings through configuration files which is accessible from all computers with a TF card reader.
+1. Allow user to add up to 9 custom commands and run them form SDCopy app though screen and keys.
+1. Online update to keep SDCopy refreshed.
+
 # License Policy
 
 1. Each device requires one license.
