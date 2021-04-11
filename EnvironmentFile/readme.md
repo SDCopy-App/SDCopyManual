@@ -35,8 +35,15 @@ BashArgumentFormat|The format of the argument of the bash to run commands. ```{0
 MountCommandFormat|The format of the command to mount. ```{0}``` is the device, ```{1}``` is the mouting point.|mount {0} {1}
 UMountCommandFormat|The format of the command to umount. ```{0}``` is the mouting point.|umount {0}
 ShutdownSystemCommand|The command to shutdown system.|shutdown -h now
+RebootSystemCommand|The command to reboot system.|reboot
 VcGenCmdGetThrottledCommand|The command to get throttled from ```vcgencmd```.|vcgencmd get_throttled
 GetOverlayStatusCommand|The command to get the status of overlay file system.|raspi-config nonint get_overlay_now
+GetOverlayConfCommand|The command to get the configuration status of overlay file system.|raspi-config nonint get_overlay_conf
+EnableOverlayFSCommand|The command to enable overlay file system.|raspi-config nonint enable_overlayfs
+DisableOverlayFSCommand|The command to disable overlay file system.|raspi-config nonint disable_overlayfs
+GetBootRoConfCommand|The comand to get the boot mounting mode.|raspi-config nonint get_bootro_conf
+EnableBootRoConfCommand|The command to set the boot mounting mode to read-only.|raspi-config nonint enable_bootro
+DisableBootRoConfCommand|The command to set the boot mounting mode to read-write.|raspi-config nonint disable_bootro
 SystemdStopServiceCommand|The command to stop this app.|systemctl stop SDCopy.service
 GetCurrentTimeZoneCommand|The command to get the current time zone.|cat /etc/timezone
 GetTimeZoneListCommand|The command to get the time zone list.|timedatectl list-timezones
