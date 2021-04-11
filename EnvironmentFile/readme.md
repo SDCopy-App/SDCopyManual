@@ -36,6 +36,7 @@ MountCommandFormat|The format of the command to mount. ```{0}``` is the device, 
 UMountCommandFormat|The format of the command to umount. ```{0}``` is the mouting point.|umount {0}
 ShutdownSystemCommand|The command to shutdown system.|shutdown -h now
 VcGenCmdGetThrottledCommand|The command to get throttled from ```vcgencmd```.|vcgencmd get_throttled
+GetOverlayStatusCommand|The command to get the status of overlay file system.|raspi-config nonint get_overlay_now
 SystemdStopServiceCommand|The command to stop this app.|systemctl stop SDCopy.service
 GetCurrentTimeZoneCommand|The command to get the current time zone.|cat /etc/timezone
 GetTimeZoneListCommand|The command to get the time zone list.|timedatectl list-timezones
@@ -45,8 +46,7 @@ SetDateTimeManuallyCommand|The command to set the Ntp off.|timedatectl set-ntp 0
 SetDateTimeWithNtpCommand|The command to set the Ntp on.|timedatectl set-ntp 1
 SetScriptExecutePermissionCommandFormat|The format of the command to give a file executing permission. ```{0}``` is the path to the file.|chmod +x {0}
 DecompressCommandFormat|The format of the command to decompress a ```tar.gz``` file to the working folder. ```{0}``` is the path to the ```tar.gz``` file.|tar zxvf {0}
-LicenseFile|The path to the license file.|/etc/SDCopy.lic
-LicenseFileOverrides|The paths to the files for overriding license, separated by semicolons. The file specified by this is moved to the position specified by ```LicenseFile``` while app starting if exists.|/boot/SDCopyLicense.txt;/boot/firmware/SDCopyLicense.txt
+LicenseFiles|The paths to the license files.|/etc/SDCopy.lic;/boot/SDCopyLicense.txt;/boot/firmware/SDCopyLicense.txt
 UpdateTempFolder|The path of the temporary folder for app updating. The folder specified by the path will be created or cleaned while app starting.|/tmp/SDCopyUpdate
 UserCommandText1|Text of the user command 1.|Reboot
 UserCommand1|Command of the user command 1.|reboot
@@ -58,6 +58,14 @@ UserCommandText4|Text of the user command 4.|
 UserCommand4|Command of the user command 4.|
 UserCommandText5|Text of the user command 5.|
 UserCommand5|Command of the user command 5.|
+UserCommandText6|Text of the user command 6.|
+UserCommand6|Command of the user command 6.|
+UserCommandText7|Text of the user command 7.|
+UserCommand7|Command of the user command 7.|
+UserCommandText8|Text of the user command 8.|
+UserCommand8|Command of the user command 8.|
+UserCommandText9|Text of the user command 9.|
+UserCommand9|Command of the user command 9.|
 UpdateBand|Band of the app while updating. For PiOS 10, use ```PiOS_arm32_10```; for Ubuntu 20.04 arm64, use ```Ubuntu_arm64_2004```.|PiOS_arm32_10
 
 # Setting
