@@ -42,8 +42,8 @@ GetOverlayConfCommand|The command to get the configuration status of overlay fil
 EnableOverlayFSCommand|The command to enable overlay file system.|raspi-config nonint enable_overlayfs
 DisableOverlayFSCommand|The command to disable overlay file system.|raspi-config nonint disable_overlayfs
 GetBootRoConfCommand|The comand to get the boot mounting mode.|raspi-config nonint get_bootro_conf
-EnableBootRoConfCommand|The command to set the boot mounting mode to read-only.|raspi-config nonint enable_bootro
-DisableBootRoConfCommand|The command to set the boot mounting mode to read-write.|raspi-config nonint disable_bootro
+EnableBootRoCommand|The command to set the boot mounting mode to read-only.|raspi-config nonint enable_bootro
+DisableBootRoCommand|The command to set the boot mounting mode to read-write.|raspi-config nonint disable_bootro
 SystemdStopServiceCommand|The command to stop this app.|systemctl stop SDCopy.service
 GetCurrentTimeZoneCommand|The command to get the current time zone.|cat /etc/timezone
 GetTimeZoneListCommand|The command to get the time zone list.|timedatectl list-timezones
