@@ -19,6 +19,7 @@ This repo contains the tech file of SDCopy to be viewed publicly.
    1. Auto detect target based on folder matching.
    1. Select one subfolder under target folder.
    1. Delete the subfolder specified with all subfolders and files.
+1. Use Samba to view all files on device.
 
 ## Helpers
 1. Network
@@ -94,7 +95,12 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
 1. Copy the right version of ```SDCopy.service``` which matched with the location of ```SDCopy.env``` to ```/etc/systemd/system/```.
 1. Run command: ```sudo systemctl daemon-reload```
 1. (Optional) Run command to set the app start with booting: ```sudo systemctl enable SDCopy.service```
-1. Run command to start the app: ```sudo systemctl start SDCopy.service```
+1. Samba function:
+   * If you want to enable Samba function:
+     1. Install Samba: ```sudo apt install samba```
+     1. Edit file ```/etc/samba/smb.conf```, find the line like ```;   include = /home/samba/etc/smb.conf.%m```, add a new line ```include = /etc/samba/SDCopy.conf``` below it.
+   * If you want to disable Samba function:
+     * Edit ```SDCopy.env```, change the line started with ```SambaConfFileName``` to ```SambaConfFileName=```.
 
 (For Ubuntu) If you need the function to apply netplan from boot partition, like PiOS, while booting:
 
@@ -103,6 +109,8 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
 1. Copy ```NetplanCopy.service``` to ```/etc/systemd/system/```.
 1. Run command ```sudo systemctl daemon-reload```.
 1. Run command ```sudo systemctl enable NetplanCopy.service``` to set the service start while booting.
+
+Finally, run this command to start the app: ```sudo systemctl start SDCopy.service```
 
 ### Enviroment File
 [EnvironmentFile](EnvironmentFile) folder contains the environment file and the description of all variables.
@@ -123,6 +131,8 @@ We found some highend disks, like [Sandisk Extreme Pro Portable SSD (E81)](https
 
 * While scanning, copying (including the cancel confirming) and deleting, do not eject the disks operating.
 
+* While SMB server working, do not eject any disk mounted.
+
 * It's ok to unplug the source disk / SD card reader / SD card directly before source scanning, after copying and after deletion.
 
 * It's ok to unplug the target disk before target scanning, after copying and after deletion.
@@ -131,3 +141,16 @@ We found some highend disks, like [Sandisk Extreme Pro Portable SSD (E81)](https
 
 # Flow
 [Flow](Flow) folder contains the work flow description of SDCopy app, in png and Visio format.
+
+# Copyright
+
+Software and integration solution are copyright of CopyPi team, 2020-2021. All rights reserved.
+Hardware copyright belongs to its author or producer.
+
+## Referenced Libraries Copyright Notice
+
+Library|Copyright|License
+---|---|---
+[SecretNest.Hardware.SinoWealth.SH1106BitmapExtension](https://www.nuget.org/packages/SecretNest.Hardware.SinoWealth.SH1106BitmapExtension/)|Allen Cui / SecretNest.info|[MIT](https://licenses.nuget.org/MIT)
+[SecretNest.Hardware.VirtualKeyboard.128x64_Monochrome](https://www.nuget.org/packages/SecretNest.Hardware.VirtualKeyboard.128x64_Monochrome/)|Allen Cui / SecretNest.info|[MIT](https://licenses.nuget.org/MIT)
+[SecretNest.Hardware.WaveShare.HAT_1Point3OLED](https://www.nuget.org/packages/SecretNest.Hardware.WaveShare.HAT_1Point3OLED/)|Allen Cui / SecretNest.info|[MIT](https://licenses.nuget.org/MIT)
