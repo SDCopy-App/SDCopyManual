@@ -132,7 +132,7 @@ Type|Brand|Product Name|Capacity|Product Code|Result
 ---|---|---|---|---|---
 HDD|Western Digital|Elements SE|5TB|WDBJRT0050BBK-WESN|:heavy_check_mark:Passed
 SSD|HIKVISION|Portable SSD|1TB|T200N|:heavy_check_mark:Passed
-SSD|SanDisk|Extreme Pro Portable SSD|2TB|E81|:x:Failed
+SSD|SanDisk|Extreme Pro Portable SSD|2TB|SDSSDE81-2T00-G25|:x:Failed
 
 # Ejecting disks
 
