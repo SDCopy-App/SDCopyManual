@@ -127,13 +127,13 @@ Finally, run this command to start the app: ```sudo systemctl start SDCopy.servi
 
 We found some highend disks, like [SanDisk Extreme Pro Portable SSD (E81)](https://shop.westerndigital.com/products/portable-drives/sandisk-extreme-pro-usb-3-2-ssd), cannot work with Raspberry Pi, including PiOS and Ubuntu. The file system of the target will be destroyed when writing files to an unsupported disk. Do a test copy before use it is hightly recommended.
 
-## Tested Devices
+# Tested Devices
 Type|Brand|Product Name|Capacity|Product Code|Result
 ---|---|---|---|---|---
+Card Reader|Kingston|MobileLite Plus microSD Reader|N/A|MobileLite Plus microSD Reader / MLPM|:heavy_check_mark:Passed
 HDD|Western Digital|Elements SE|5TB|WDBJRT0050BBK-WESN|:heavy_check_mark:Passed
 SSD|HIKVISION|Portable SSD|1TB|T200N|:heavy_check_mark:Passed
 SSD|SanDisk|Extreme Pro Portable SSD|2TB|SDSSDE81-2T00-G25|:x:Failed
-Card Reader|Kingston|MobileLite Plus microSD Reader|N/A|MobileLite Plus microSD Reader / MLPM|:heavy_check_mark:Passed
 
 # Ejecting disks
 
