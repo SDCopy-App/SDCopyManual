@@ -1,5 +1,6 @@
 # Environment Variables
 
+Note: Line breaks in Default value are just for reading convenience. Do not set environment as multi-line.
 Variable|Description|Default Value
 ---|---|---
 GpioMinimalSignalChanging|In order to prevent false signals caused by the signal jitter of the hardware buttons, the pressing signals whose duration is less than this setting (milliseconds) will be ignored.|100
@@ -23,7 +24,7 @@ SambaMountIncludedList|The device pattern list when Samba server mounting all vo
 SambaMountExcludedList|The device pattern list to be excluded when Samba server mounting all volume/partition devices, separated by semicolons or commas.|sd?;mmcblk?
 SambaMountPointFormat|The format of the path as mounting point of each device to be mounted in Samba server. ```{0}``` is the device name. Those folders will be created while Samba server mounting and will be removed after Samba server stopped.|/tmp/SDCopySMBMounting-{0}
 SambaConfFileName|The path to the configuration file contains shares created by SDCopy for Samba server. Set to empty to disable Samba server function. Note: You need to edit the samba configuration file to include this file.|/etc/samba/SDCopy.conf
-SambaConfFormat|The format of the node in the configuration file for one share. ```{0}``` is the share name. ```{1}``` is the path. ```{2}``` is an enter.|SambaConfFormat=[{0}]{2}path = {1}{2}guest ok = yes{2}writable = yes{2}force user = root{2}force group = root{2}
+SambaConfFormat|The format of the node in the configuration file for one share. ```{0}``` is the share name. ```{1}``` is the path. ```{2}``` is an enter.|SambaConfFormat=[{0}]{2}<br>path = {1}{2}}<br>guest ok = yes{2}}<br>writable = yes{2}}<br>force user = root{2}}<br>force group = root{2}
 SambaSharePointSource|The share name of source.|SDCopy-Source
 SambaSharePointTarget|The share name of target.|SDCopy-Target
 SambaSharePointRoot|The share name of root file system. Set to empty will disable this share.|SDCopy-Root
