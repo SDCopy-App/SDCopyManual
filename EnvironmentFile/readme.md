@@ -24,7 +24,7 @@ SambaMountIncludedList|The device pattern list when Samba server mounting all vo
 SambaMountExcludedList|The device pattern list to be excluded when Samba server mounting all volume/partition devices, separated by semicolons or commas.|sd?;mmcblk?
 SambaMountPointFormat|The format of the path as mounting point of each device to be mounted in Samba server. ```{0}``` is the device name. Those folders will be created while Samba server mounting and will be removed after Samba server stopped.|/tmp/SDCopySMBMounting-{0}
 SambaConfFileName|The path to the configuration file contains shares created by SDCopy for Samba server. Set to empty to disable Samba server function. Note: You need to edit the samba configuration file to include this file.|/etc/samba/SDCopy.conf
-SambaConfFormat|The format of the node in the configuration file for one share. ```{0}``` is the share name. ```{1}``` is the path. ```{2}``` is an enter.|SambaConfFormat=[{0}]{2}<br>path = {1}{2}}<br>guest ok = yes{2}}<br>writable = yes{2}}<br>force user = root{2}}<br>force group = root{2}
+SambaConfFormat|The format of the node in the configuration file for one share. ```{0}``` is the share name. ```{1}``` is the path. ```{2}``` is an enter.|SambaConfFormat=[{0}]{2}<br>path = {1}{2}<br>guest ok = yes{2}<br>writable = yes{2}<br>force user = root{2}<br>force group = root{2}
 SambaSharePointSource|The share name of source.|SDCopy-Source
 SambaSharePointTarget|The share name of target.|SDCopy-Target
 SambaSharePointRoot|The share name of root file system. Set to empty will disable this share.|SDCopy-Root
@@ -37,7 +37,7 @@ ExtendTargetFileBeforeCopying|Whether extend the length of the target file to ma
 NicDenyList|The network interface card to be excluded from the network list.|lo
 NicPriorityList|The network interface cards to be shown at the top in the network list, separated by semicolons or commas.|wlan0
 WlanDevice|The name of the Wlan network interface card.|wlan0
-WpaSupplicantConf|The path to the conf file of wpa_supplicant.|/etc/wpa_supplicant/wpa_supplicant.conf
+WpaSupplicantConf|The path to the conf file of wpa_supplicant.|/etc/wpa_supplicant/}<br>wpa_supplicant.conf
 WpaSupplicantApplyCommandFormat|The format of the command to apply the current setting of wpa_supplicant. ```{0}``` is the name of the wlan device specified by ```WlanDevice```.|wpa_cli -i {0} reconfigure
 NetplanConfFolder|The path to the conf folder of netplan.|/etc/netplan
 NetplanConfFile|The file name to store the network setting created by SDCopy for netplan.|99-SDCopy.yaml
@@ -60,18 +60,18 @@ SystemdStopServiceCommand|The command to stop this app.|systemctl stop SDCopy.se
 GetCurrentTimeZoneCommand|The command to get the current time zone.|cat /etc/timezone
 GetTimeZoneListCommand|The command to get the time zone list.|timedatectl list-timezones
 SetTimeZoneCommandFormat|The format of the command to set time zone. ```{0}``` is continent, ```{1}``` is city. When setting to ```UTC```, ```{0}``` is ```Etc``` and ```{1}``` is ```Utc```.|timedatectl set-timezone {0}/{1}
-SetDateTimeCommandFormat|The format of the command to set date and time. ```{0}``` is year, ```{1}``` is month, ```{2}``` is day, ```{3}``` is hour, ```{4}``` is minute, ```{5}``` is second.|timedatectl set-time '{0:D4}-{1:D2}-{2:D2} {3:D2}:{4:D2}:{5:D2}'
+SetDateTimeCommandFormat|The format of the command to set date and time. ```{0}``` is year, ```{1}``` is month, ```{2}``` is day, ```{3}``` is hour, ```{4}``` is minute, ```{5}``` is second.|timedatectl set-time '{0:D4}-{1:D2}-<br>{2:D2} {3:D2}:{4:D2}:{5:D2}'
 CheckWhetherNtpIsEnabledCommand|The command to check the Ntp status.|timedatectl show \| grep '^NTP=yes'
 SetDateTimeManuallyCommand|The command to set the Ntp off.|timedatectl set-ntp 0
 SetDateTimeWithNtpCommand|The command to set the Ntp on.|timedatectl set-ntp 1
 SetScriptExecutePermissionCommandFormat|The format of the command to give a file executing permission. ```{0}``` is the path to the file.|chmod +x {0}
 DecompressCommandFormat|The format of the command to decompress a ```tar.gz``` file to the working folder. ```{0}``` is the path to the ```tar.gz``` file.|tar zxvf {0}
-LicenseFiles|The paths to the license files.|/etc/SDCopy.lic;/boot/SDCopyLicense.txt;/boot/firmware/SDCopyLicense.txt
+LicenseFiles|The paths to the license files.|/etc/SDCopy.lic;<br>/boot/SDCopyLicense.txt;<br>/boot/firmware/SDCopyLicense.txt
 UpdateTempFolder|The path of the temporary folder for app updating. The folder specified by the path will be created or cleaned while app starting.|/tmp/SDCopyUpdate
 UserCommandText1|Text of the user command 1.|Reboot
 UserCommand1|Command of the user command 1.|reboot
 UserCommandText2|Text of the user command 2.|Update System
-UserCommand2|Command of the user command 2.|apt update && apt upgrade -y && apt autoremove -y
+UserCommand2|Command of the user command 2.|apt update && apt upgrade -y <br>&& apt autoremove -y
 UserCommandText3|Text of the user command 3.|
 UserCommand3|Command of the user command 3.|
 UserCommandText4|Text of the user command 4.|
