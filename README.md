@@ -5,53 +5,49 @@ This repo contains the tech file of SDCopy to be viewed publicly.
 # Functions
 ## Main functions
 1. Copy files from source to target.
-   1. Auto detect source based on folder matching.
-   1. Auto detect target based on folder matching.
-   1. Source subfolders / files filter to exclude subfolders / files from copying.
-   1. Target subfolder auto naming, manual naming and selecting.
-   1. Overwrite or resume when target subfolder exists.
-   1. Copying files with progress, speed and left time displayed.
-   1. Allow to delete source folder after all files copied successfully.
+   * Auto detect source based on folder matching.
+   * Auto detect target based on folder matching.
+   * Source subfolders / files filter to exclude subfolders / files from copying.
+   * Target subfolder auto naming, manual naming and selecting.
+   * Overwrite or resume when target subfolder exists.
+   * Copying files with progress, speed and left time displayed.
+   * Allow to delete source folder after all files copied successfully.
 1. Clean source.
-   1. Auto detect source based on folder matching.
-   1. Delete all subfolders and files from source folder.
+   * Auto detect source based on folder matching.
+   * Delete all subfolders and files from source folder.
 1. Delete target subfolder.
-   1. Auto detect target based on folder matching.
-   1. Select one subfolder under target folder.
-   1. Delete the subfolder specified with all subfolders and files.
+   * Auto detect target based on folder matching.
+   * Select one subfolder under target folder.
+   * Delete the subfolder specified with all subfolders and files.
 1. Use Samba to view all files on device.
 
 ## Helpers
 1. Network
-   1. Check all IPv4 addresses.
-   1. Check all known SSID.
-   1. Add new SSID, allow open SSID (no password) or WPA-PSK protected SSID (with password).
-   1. Remove SSID.
-   1. Restart Wifi Service.
-   
+   * Check all IPv4 addresses.
+   * Check all known SSID.
+   * Add new SSID, allow open SSID (no password) or WPA-PSK protected SSID (with password).
+   * Remove SSID.
+   * Restart Wifi Service.
    * Note: 
      * This helper works by editing the configuration files of netplan or wpa_supplicant. To use a complex networking, it still possible to edit your network manually.
      * To connect a wifi with web authentication page, a desktop environment is preferred for manual operation.
 1. Date and Time
-   1. Check current date and time.
-   1. Set date and time manually.
-   1. Set NTP on or off.
-   1. Check and set the time zone.
-   
+   * Check current date and time.
+   * Set date and time manually.
+   * Set NTP on or off.
+   * Check and set the time zone.
    * Note: This helper works by communicating with ```timedatectl``` command.
 1. Overlay File System (PiOS only)
-   1. Check and change the status of Overlay File System.
-   1. Check and change the status of Boot partition mounting mode (read-only or read-write).
-   1. Do not allow to change system files and update SDCopy when Overlay File System is enabled.
-
+   * Check and change the status of Overlay File System.
+   * Check and change the status of Boot partition mounting mode (read-only or read-write).
+   * Do not allow to change system files and update SDCopy when Overlay File System is enabled.
    * Note: This helper works by communicating with ```raspi-config``` command.
 
 ## Additional
 1. Hardware status monitoring
-   1. Check and display whether the Raspberry Pi hardware is under-voltage, frequency capped, throttled and over heated.
-   1. Prompt when Raspberry Pi hardware was under-voltage, frequency capped, throttled and over heated since last boot.
-   1. Prevent entering functions which may change file system, like copying or deleting, when under-voltage to avoid disk corruption.
-   
+   * Check and display whether the Raspberry Pi hardware is under-voltage, frequency capped, throttled and over heated.
+   * Prompt when Raspberry Pi hardware was under-voltage, frequency capped, throttled and over heated since last boot.
+   * Prevent entering functions which may change file system, like copying or deleting, when under-voltage to avoid disk corruption.
    * Note: This function works by getting status from ```vcgencmd get_throttled``` command.
 1. Allow user to change almost all settings through configuration files which is accessible from all computers with a TF card reader.
 1. Allow user to add up to 9 custom commands and run them form SDCopy app though screen and keys.
@@ -82,8 +78,8 @@ Currently, SDCopy supports PiOS 10 (32-bit, including normal, lite and full vers
 1. Eject and replug the TF card.
 1. Place the license file to the 1st partition as ```SDCopyLicense.txt```.
 1. Place the wifi config file if required. While booting, if the file exists, existing network setting will be overwritten from this file, and the file will be removed after that.
-   1. For PiOS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details.
-   1. For Ubuntu: Place a file ```netplan.yaml``` in the first partition. Check [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) for references. **Note: File name is different from the official guide.**
+   * For PiOS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details.
+   * For Ubuntu: Place a file ```netplan.yaml``` in the first partition. Check [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) for references. **Note: File name is different from the official guide.**
 1. Eject the TF card.
 1. Boot Raspberry Pi with the TF card.
 
@@ -164,13 +160,9 @@ SSD|SanDisk|Extreme Pro Portable SSD|2TB|SDSSDE81-2T00-G25|:x:Failed
 # Ejecting disks
 
 * While scanning, copying (including the cancel confirming) and deleting, do not eject the disks operating.
-
 * While SMB server working, do not eject any disk mounted.
-
 * It's ok to unplug the source disk / SD card reader / SD card directly before source scanning, after copying and after deletion.
-
 * It's ok to unplug the target disk before target scanning, after copying and after deletion.
-
 * In other cases, unplugging the disk directly will not damage the files in the device, but may cause the copying or deletion process to be unable to continue.
 
 # Flow
