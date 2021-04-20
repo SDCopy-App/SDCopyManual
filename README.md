@@ -29,9 +29,9 @@ This repo contains the tech file of SDCopy to be viewed publicly.
    1. Remove SSID.
    1. Restart Wifi Service.
    
-   Note: 
-      * This helper works by editing the configuration files of netplan or wpa_supplicant. To use a complex networking, it still possible to edit your network manually.
-      * To connect a wifi with web authentication page, a desktop environment is preferred for manual operation.
+   * Note: 
+     * This helper works by editing the configuration files of netplan or wpa_supplicant. To use a complex networking, it still possible to edit your network manually.
+     * To connect a wifi with web authentication page, a desktop environment is preferred for manual operation.
 1. Date and Time
    1. Check current date and time.
    1. Set date and time manually.
