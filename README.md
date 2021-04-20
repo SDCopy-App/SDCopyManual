@@ -28,6 +28,9 @@ This repo contains the tech file of SDCopy to be viewed publicly.
    1. Add new SSID, allow open SSID (no password) or WPA-PSK protected SSID (with password).
    1. Remove SSID.
    1. Restart Wifi Service.
+   Note: 
+      * This helper works by editing the configuration files of netplan or wpa_supplicant. To use a complex networking, it still possible to edit your network manually.
+      * To connect a wifi with web authentication page, a desktop environment is preferred for manual operation.
 1. Date and Time
    1. Check current date and time.
    1. Set date and time manually.
@@ -59,7 +62,7 @@ This repo contains the tech file of SDCopy to be viewed publicly.
 
 # Supported OS
 
-Currently, SDCopy supports PiOS 10 (32-bit) and Ubuntu 20.04 LTS (64-bit) on Raspberry Pi 4.
+Currently, SDCopy supports PiOS 10 (32-bit, including normal, lite and full versions) and Ubuntu 20.04 LTS (64-bit) on Raspberry Pi 4.
 
 # Install
 
