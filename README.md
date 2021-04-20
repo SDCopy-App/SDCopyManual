@@ -45,19 +45,20 @@ This repo contains the tech file of SDCopy to be viewed publicly.
    1. Do not allow to change system files and update SDCopy when Overlay File System is enabled.
 
    * Note: This helper works by communicating with ```raspi-config``` command.
-   * 
+
 ## Additional
 1. Hardware status monitoring
    1. Check and display whether the Raspberry Pi hardware is under-voltage, frequency capped, throttled and over heated.
    1. Prompt when Raspberry Pi hardware was under-voltage, frequency capped, throttled and over heated since last boot.
-   1. Do not allow to start changing file system, like copying or deleting, when under-voltage to avoid disk corruption.
+   1. Prevent entering functions which may change file system, like copying or deleting, when under-voltage to avoid disk corruption.
    
    * Note: This function works by getting status from ```vcgencmd get_throttled``` command.
 1. Allow user to change almost all settings through configuration files which is accessible from all computers with a TF card reader.
 1. Allow user to add up to 9 custom commands and run them form SDCopy app though screen and keys.
 1. Online update to keep SDCopy refreshed.
-   * Internet connection is required.
-   * Network fees may apply.
+   * Note:
+     * Internet connection is required.
+     * Network fees may apply.
 
 # License Policy
 
