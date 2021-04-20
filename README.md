@@ -66,9 +66,9 @@ This repo contains the tech file of SDCopy to be viewed publicly.
 1. Each license should bind to a user, with name and email.
 1. At our server side, log will be generated and kept when license quering.
 1. When update package sent, one email will be sent to the licence owner and a record will be kept on our server.
-1. If you beleave that your license is lost or stolen, contact support desk to change to a new one.
+1. If you believe that your license is lost or stolen, contact support desk to change to a new one.
 1. The log kept on our server will not be transferred to any people or group other than SDCopy development team.
-3. We reserve the right to check the log frequently to identify and deactivate the license used in violation.
+1. We reserve the right to check the log from time to time to identify and deactivate the license that violates the policy.
 
 # Supported OS
 
