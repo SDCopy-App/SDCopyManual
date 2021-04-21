@@ -108,19 +108,21 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
    * If you want to enable Samba function:
      1. Install Samba: ```sudo apt install samba```
      1. Edit file ```/etc/samba/smb.conf```, find the line like ```;   include = /home/samba/etc/smb.conf.%m```, add a new line ```include = /etc/samba/SDCopy.conf``` below it.
-     1. (Optional) Create file ```/etc/avahi/services/samba.service``` with content below to enable auto discovery.
-        ```
-        <?xml version="1.0" standalone='no'?><!--*-nxml-*-->
-        <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
-        
-        <service-group>
-          <name replace-wildcards="yes">%h</name>
-          <service>
-            <type>_smb._tcp</type>
-            <port>445</port>
-          </service>
-        </service-group>
-        ```
+     1. (Optional) If you need samba auto discovery:
+        1. (For Ubuntu) Install avahi: ```sudo install avahi-daemon```. This package is included in Pi OS already.
+        2. Create file ```/etc/avahi/services/samba.service``` with content below to enable auto discovery.
+           ```
+           <?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+           <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+           
+           <service-group>
+             <name replace-wildcards="yes">%h</name>
+             <service>
+               <type>_smb._tcp</type>
+               <port>445</port>
+             </service>
+           </service-group>
+           ```
    * If you want to disable Samba function:
      * Edit ```SDCopy.env```, change the line started with ```SambaConfFileName``` to ```SambaConfFileName=```.
 
