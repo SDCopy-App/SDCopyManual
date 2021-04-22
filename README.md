@@ -78,8 +78,8 @@ Currently, SDCopy supports PiOS 10 (32-bit, including normal, lite and full vers
 1. Eject and replug the TF card.
 1. Create a text file in the 1st partition named as ```SDCopyLicense.txt``` with your license key. Your license key is a string with 32 hexadecimal characters, without enter or any other texts.
 1. Place the wifi config file if required. While booting, if the file exists, existing network setting will be overwritten from this file, and the file will be removed after that.
-   * For PiOS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details.
-   * For Ubuntu: Place a file ```netplan.yaml``` in the first partition. Check [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) for references. **Note: File name is different from the official guide.**
+   * For PiOS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details. An example file named ```(Example)wpa_supplicant.conf``` can be found at the same place.
+   * For Ubuntu: Place a file ```netplan.yaml``` in the first partition. Check [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) for references. **Note: File name is different from the official guide.** An example file named ```(Example)netplan.yaml``` can be found at the same place.
 1. Eject the TF card.
 1. Boot Raspberry Pi with the TF card.
 
