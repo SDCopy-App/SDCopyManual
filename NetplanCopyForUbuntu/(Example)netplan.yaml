@@ -1,0 +1,20 @@
+# This file is an example of netplan.yaml
+
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: true
+      dhcp6: true
+      optional: true
+  wifis:
+    wlan0:
+      dhcp4: true
+      dhcp6: true
+      optional: true
+      access-points:
+        "ssid.name.here":
+          password: "password.here"
+        "ssid.2.name.here":
+          password: "password.2.here"
+        "ssid.3.without.password": {}
