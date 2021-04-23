@@ -37,7 +37,7 @@ This repo contains the tech file of SDCopy to be viewed publicly.
    * Set NTP on or off.
    * Check and set the time zone.
    * Note: This helper works by communicating with ```timedatectl``` command.
-1. Overlay File System (PiOS only)
+1. Overlay File System (Pi OS only)
    * Check and change the status of Overlay File System.
    * Check and change the status of Boot partition mounting mode (read-only or read-write).
    * Do not allow to change system files and update SDCopy when Overlay File System is enabled.
@@ -68,7 +68,7 @@ This repo contains the tech file of SDCopy to be viewed publicly.
 
 # Supported OS
 
-Currently, SDCopy supports PiOS 10 (32-bit, including normal, lite and full versions) and Ubuntu 20.04 LTS (64-bit) on Raspberry Pi 4.
+Currently, SDCopy supports Pi OS 10 (32-bit, including normal, lite and full versions) and Ubuntu 20.04 LTS (64-bit) on Raspberry Pi 4.
 
 # Install
 
@@ -78,7 +78,7 @@ Currently, SDCopy supports PiOS 10 (32-bit, including normal, lite and full vers
 1. Eject and replug the TF card.
 1. Create a text file in the 1st partition named as ```SDCopyLicense.txt``` with your license key. Your license key is a string with 32 hexadecimal characters, without enter or any other texts.
 1. Place the wifi config file if required. While booting, if the file exists, existing network setting will be overwritten from this file, and the file will be removed after that.
-   * For PiOS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [PiOS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details. An example file named ```(Example)wpa_supplicant.conf``` can be found at the same place.
+   * For Pi OS: Place a file ```wpa_supplicant.conf``` in the first partition. Check [Pi OS](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) for details. An example file named ```(Example)wpa_supplicant.conf``` can be found at the same place.
    * For Ubuntu: Place a file ```netplan.yaml``` in the first partition. Check [Ubuntu](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) for references. **Note: File name is different from the official guide.** An example file named ```(Example)netplan.yaml``` can be found at the same place.
 1. Eject the TF card.
 1. Boot Raspberry Pi with the TF card.
@@ -89,14 +89,14 @@ When required, edit the ```SDCopy.env```, which is a text file, placed in the 1s
 The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd partition.
 
 ### Default user and password
-* (For PiOS) Default user name is ```pi```, with password ```raspberry```.
+* (For Pi OS) Default user name is ```pi```, with password ```raspberry```.
 * (For Ubuntu) Default user name is ```ubuntu```, with password ```ubuntu```.
 
 ## Steps to install this app manually
 
 1. Install GDI+ and GPIO: ```sudo apt install libgdiplus libgpiod-dev```
 1. (For Ubuntu) Install RaspberryPi library: ```sudo apt install libraspberrypi-bin```
-1. (For PiOS) Enable SPI: use ```sudo raspi-config``` - (Interfacing Options - SPI), or add ```dtparam=spi=on``` at the bottom of ```/boot/config.txt```. A reboot is required.
+1. (For Pi OS) Enable SPI: use ```sudo raspi-config``` - (Interfacing Options - SPI), or add ```dtparam=spi=on``` at the bottom of ```/boot/config.txt```. A reboot is required.
 1. Copy the right version of ```SDCopy``` to ```/usr/bin/```.
 1. Run command: ```sudo chmod +x /usr/bin/SDCopy```
 1. Copy your own ```SDCopy.lic``` to ```/etc/```.
@@ -125,14 +125,27 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
            ```
    * If you want to disable Samba function:
      * Edit ```SDCopy.env```, change the line started with ```SambaConfFileName``` to ```SambaConfFileName=```.
-
-(For Ubuntu) If you need the function to apply netplan from boot partition, like PiOS, while booting:
-
-1. Copy ```NetplanCopy.sh``` to ```/etc/```.
-1. Run command ```sudo chmod +x /etc/NetplanCopy.sh```.
-1. Copy ```NetplanCopy.service``` to ```/etc/systemd/system/```.
-1. Run command ```sudo systemctl daemon-reload```.
-1. Run command ```sudo systemctl enable NetplanCopy.service``` to set the service start while booting.
+1. (For Ubuntu, Optional) If you need the function to apply netplan from boot partition, like Pi OS, while booting:
+   1. Get files from [NetplanCopyForUbuntu](NetplanCopyForUbuntu).
+   1. Copy ```NetplanCopy.sh``` to ```/etc/```.
+   1. Run command ```sudo chmod +x /etc/NetplanCopy.sh```.
+   1. Copy ```NetplanCopy.service``` to ```/etc/systemd/system/```.
+   1. Run command ```sudo systemctl daemon-reload```.
+   1. Run command ```sudo systemctl enable NetplanCopy.service``` to set the service start while booting.
+1. (Optional) If you need to run script placed in the first partition at every boot:
+   * For Pi OS:
+     1. Get files from [ExecBootForPiOS](ExecBootForPiOS).
+     1. Copy ```ExecBootScript.service``` to ```/etc/systemd/system```.
+     1. Copy ```(Example)ExecBoot.sh``` to ```/boot```.
+     1. Run command ```sudo systemctl daemon-reload```.
+     1. Run command ```sudo systemctl enable ExecBootScript.service``` to set the service start while booting.
+   * For Ubuntu:
+     1. Get files from [ExecBootForUbuntu](ExecBootForUbuntu).
+     1. Copy ```ExecBootScript.service``` to ```/etc/systemd/system```.
+     1. Copy ```(Example)ExecBoot.sh``` to ```/boot/firmware```.
+     1. Run command ```sudo systemctl daemon-reload```.
+     1. Run command ```sudo systemctl enable ExecBootScript.service``` to set the service start while booting.
+   * Use: The file in the first partition named ```ExecBoot.sh``` will be run by root at every boot when found. Reference ```(Example)ExecBoot.sh``` for example.
 
 Finally, run this command to start the app: ```sudo systemctl start SDCopy.service```
 
@@ -149,7 +162,7 @@ Finally, run this command to start the app: ```sudo systemctl start SDCopy.servi
 
 ## Warning
 
-We found some highend disks, like [SanDisk Extreme Pro Portable SSD (E81)](https://shop.westerndigital.com/products/portable-drives/sandisk-extreme-pro-usb-3-2-ssd), cannot work with Raspberry Pi, including PiOS and Ubuntu. The file system of the target will be destroyed when writing files to an unsupported disk. Do a test copy before use it is hightly recommended.
+We found some highend disks, like [SanDisk Extreme Pro Portable SSD (E81)](https://shop.westerndigital.com/products/portable-drives/sandisk-extreme-pro-usb-3-2-ssd), cannot work with Raspberry Pi, including Pi OS and Ubuntu. The file system of the target will be destroyed when writing files to an unsupported disk. Do a test copy before use it is hightly recommended.
 
 # Tested Devices
 Type|Brand|Product Name|Capacity|Product Code|Result
