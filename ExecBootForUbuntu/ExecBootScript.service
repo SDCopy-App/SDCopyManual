@@ -1,0 +1,16 @@
+[Unit]
+Description=Run script in boot folder
+ConditionPathExists=/boot/firmware/ExecBoot.sh
+
+[Service]
+Environment=BootMountingPoint=/boot/firmware
+WorkingDirectory=/boot/firmware
+ExecStart=/boot/firmware/ExecBoot.sh
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+User=root
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
