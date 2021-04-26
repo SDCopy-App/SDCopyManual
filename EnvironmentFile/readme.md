@@ -61,7 +61,7 @@ GetCurrentTimeZone<br>Command|The command to get the current time zone.|cat /etc
 GetTimeZoneList<br>Command|The command to get the time zone list.|timedatectl list-timezones
 SetTimeZone<br>CommandFormat|The format of the command to set time zone. ```{0}``` is continent, ```{1}``` is city. When setting to ```UTC```, ```{0}``` is ```Etc``` and ```{1}``` is ```Utc```.|timedatectl set-timezone {0}/{1}
 SetDateTime<br>CommandFormat|The format of the command to set date and time. ```{0}``` is year, ```{1}``` is month, ```{2}``` is day, ```{3}``` is hour, ```{4}``` is minute, ```{5}``` is second.|timedatectl set-time '{0:D4}-{1:D2}-<br>{2:D2} {3:D2}:{4:D2}:{5:D2}'
-CheckWhether<br>NtpIsEnabledCommand|The command to check the Ntp status.|timedatectl show \| grep '^NTP=yes'
+CheckWhether<br>NtpIsEnabledCommand|The command to check the Ntp status.|timedatectl show \| grep -q '^NTP=yes'
 SetDateTimeManually<br>Command|The command to set the Ntp off.|timedatectl set-ntp 0
 SetDateTimeWithNtp<br>Command|The command to set the Ntp on.|timedatectl set-ntp 1
 SetScript<br>ExecutePermission<br>CommandFormat|The format of the command to give a file executing permission. ```{0}``` is the path to the file.|chmod +x {0}
