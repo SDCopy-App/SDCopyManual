@@ -35,7 +35,7 @@ CopyBlockLength|The size of the block for each reading and writing while file co
 StreamBufferLength|The size of the stream buffer for disk I/O. Integer value.|262144
 ExtendTargetFile<br>BeforeCopying|Whether extend the length of the target file to match the source before writing data. Boolean value.|false
 NicDenyList|The network interface card to be excluded from the network list.|lo
-NicPriorityList|The network interface cards to be shown at the top in the network list, separated by semicolons or commas.|wlan0
+NicPriorityList|The network interface cards to be shown at the top in the network list, separated by semicolons or commas.|wlan0;eth0
 WlanDevice|The name of the Wlan network interface card.|wlan0
 WpaSupplicantConf|The path to the conf file of wpa_supplicant.|/etc/wpa_supplicant/}<br>wpa_supplicant.conf
 WpaSupplicantApply<br>CommandFormat|The format of the command to apply the current setting of wpa_supplicant. ```{0}``` is the name of the wlan device specified by ```WlanDevice```.|wpa_cli -i {0} reconfigure
