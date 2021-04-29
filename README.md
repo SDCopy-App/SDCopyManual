@@ -195,3 +195,4 @@ Library|Copyright|License
 [SecretNest.Hardware.SinoWealth.SH1106BitmapExtension](https://www.nuget.org/packages/SecretNest.Hardware.SinoWealth.SH1106BitmapExtension/)|Allen Cui / SecretNest.info|[MIT](https://licenses.nuget.org/MIT)
 [SecretNest.Hardware.VirtualKeyboard.128x64_Monochrome](https://www.nuget.org/packages/SecretNest.Hardware.VirtualKeyboard.128x64_Monochrome/)|Allen Cui / SecretNest.info|[MIT](https://licenses.nuget.org/MIT)
 [SecretNest.Hardware.WaveShare.HAT_1Point3OLED](https://www.nuget.org/packages/SecretNest.Hardware.WaveShare.HAT_1Point3OLED/)|Allen Cui / SecretNest.info|[MIT](https://licenses.nuget.org/MIT)
+[.NET BLE Server](https://github.com/phylomeno/dotnet-ble-server)|Roman Scheidegger|[MIT](https://github.com/phylomeno/dotnet-ble-server/blob/master/LICENSE)
