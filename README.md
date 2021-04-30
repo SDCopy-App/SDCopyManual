@@ -168,9 +168,13 @@ We found some highend disks, like [SanDisk Extreme Pro Portable SSD (E81)](https
 Type|Brand|Product Name|Capacity|Product Code|Result
 ---|---|---|---|---|---
 Card Reader|Kingston|MobileLite Plus microSD Reader|N/A|MobileLite Plus microSD Reader / MLPM|:heavy_check_mark:Passed
+Card Reader|Kingston|MobileLite Plus SD Reader|N/A|MobileLite Plus SD Reader / MLP|:heavy_check_mark:Passed
+Card Reader|UGREEN|2-in-1 USB C OTG Card Reader|N/A|CM184/CM185|:heavy_check_mark:Passed
 HDD|Western Digital|Elements SE|5TB|WDBJRT0050BBK-WESN|:heavy_check_mark:Passed
 SSD|HIKVISION|Portable SSD|1TB|T200N|:heavy_check_mark:Passed
 SSD|SanDisk|Extreme Pro Portable SSD|2TB|SDSSDE81-2T00-G25|:x:Failed
+DIY SSD|Western Digital &<br>ORICO|WD Blue SN550 NVMe SSD &<br>M.2 SSD Enclosure|1TB|WDS100T2B0C &<br>ORICO TCM2M-C3|:x:Failed
+DIY SSD|Western Digital &<br>ORICO|WD Blue SATA SSD 2.5”/7mm cased &<br>2.5 inch Transparent Type-C Hard Drive Enclosure|2TB|WDS200T2B0A &<br>ORICO 2139C3|:heavy_check_mark:Passed
 
 # Ejecting disks
 
