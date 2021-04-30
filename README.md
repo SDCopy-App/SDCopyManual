@@ -169,7 +169,7 @@ Type|Brand|Product Name|Capacity|Product Code|Result
 ---|---|---|---|---|---
 Card Reader|Kingston|MobileLite Plus microSD Reader|N/A|MobileLite Plus microSD Reader / MLPM|:heavy_check_mark:Passed
 Card Reader|Kingston|MobileLite Plus SD Reader|N/A|MobileLite Plus SD Reader / MLP|:heavy_check_mark:Passed
-Card Reader|UGREEN|2-in-1 USB C OTG Card Reader|N/A|CM184/CM185|:heavy_check_mark:Passed
+Card Reader|UGREEN|2-in-1 USB C OTG Card Reader|N/A|CM185|:heavy_check_mark:Passed
 HDD|Western Digital|Elements SE|5TB|WDBJRT0050BBK-WESN|:heavy_check_mark:Passed
 SSD|HIKVISION|Portable SSD|1TB|T200N|:heavy_check_mark:Passed
 SSD|SanDisk|Extreme Pro Portable SSD|2TB|SDSSDE81-2T00-G25|:x:Failed
