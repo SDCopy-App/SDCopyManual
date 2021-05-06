@@ -94,8 +94,8 @@ The 1st partition is editable on Windows, Linux and MacOS. Do not format the 2nd
 
 ## Steps to install this app manually
 
-1. Install GDI+ and GPIO: ```sudo apt install libgdiplus libgpiod-dev```
-1. (For Ubuntu) Install RaspberryPi library: ```sudo apt install libraspberrypi-bin```
+1. Install GDI+, GPIO, Bluetooth libs: ```sudo apt install libgdiplus libgpiod-dev bluez```
+1. (For Ubuntu) Install RaspberryPi library: ```sudo apt install libraspberrypi-bin pi-bluetooth```
 1. (For Pi OS) Enable SPI: use ```sudo raspi-config``` - (Interfacing Options - SPI), or add ```dtparam=spi=on``` at the bottom of ```/boot/config.txt```. A reboot is required.
 1. Copy the right version of ```SDCopy``` to ```/usr/bin/```.
 1. Run command: ```sudo chmod +x /usr/bin/SDCopy```
