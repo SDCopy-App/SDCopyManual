@@ -1,22 +1,22 @@
 # SDCopy Manual
 
-This repo contains the tech file of SDCopy to be viewed publicly.
+This repo contains tech files of SDCopy to be viewed publicly.
 
 ## Content
 * Functions
   * [Main functions](#main-functions)
   * [Helpers](#helpers)
   * [Additional](#additional)
-* License policy
-* Supported OS
+* [License policy](#license-policy)
+* [Supported OS](#supported-os)
 * Install
-  * Steps to install using pre-built image
-  * Steps to install this app manually
-* Steps to prepare the target disk
-* Ejecting disks
-* Tested devices
-* Flow
-* Copyright
+  * [Steps to install using pre-built image](#steps-to-install-using-pre-built-image)
+  * [Steps to install this app manually](#steps-to-install-this-app-manually)
+* [Steps to prepare the target disk](#steps-to-prepare-the-target-disk)
+* [Ejecting disks](#ejecting-disks)
+* [Tested devices](#tested-devices)
+* [Flow](#flow)
+* [Copyright](#copyright)
 
 # Functions
 ## Main functions
