@@ -2,6 +2,22 @@
 
 This repo contains the tech file of SDCopy to be viewed publicly.
 
+## Content
+* Functions
+  * Main functions
+  * Helpers
+  * Additional
+* License policy
+* Supported OS
+* Install
+  * Steps to install using pre-built image
+  * Steps to install this app manually
+* Steps to prepare the target disk
+* Ejecting disks
+* Tested devices
+* Flow
+* Copyright
+
 # Functions
 ## Main functions
 1. Copy files from source to target.
@@ -56,7 +72,7 @@ This repo contains the tech file of SDCopy to be viewed publicly.
      * Internet connection is required.
      * Network fees may apply.
 
-# License Policy
+# License policy
 
 1. Each device requires one license.
 1. Each license should bind to a user, with name and email.
@@ -160,11 +176,15 @@ Finally, run this command to start the app: ```sudo systemctl start SDCopy.servi
 1. Format the disk with supported file system, like exFAT.
 1. Put a folder in disk named ```Target```.
 
-## Warning
+# Ejecting disks
 
-We found some highend disks, like [SanDisk Extreme Pro Portable SSD (E81)](https://shop.westerndigital.com/products/portable-drives/sandisk-extreme-pro-usb-3-2-ssd), cannot work with Raspberry Pi, including Pi OS and Ubuntu. The file system of the target will be destroyed when writing files to an unsupported disk. Do a test copy before use it is hightly recommended.
+* While scanning, copying (including the cancel confirming) and deleting, do not eject the disks operating.
+* While SMB server working, do not eject any disk mounted.
+* It's ok to unplug the source disk / SD card reader / SD card directly before source scanning, after copying and after deletion.
+* It's ok to unplug the target disk before target scanning, after copying and after deletion.
+* In other cases, unplugging the disk directly will not damage the files in the device, but may cause the copying or deletion process to be unable to continue.
 
-# Tested Devices
+# Tested devices
 Type|Brand|Product Name|Capacity|Product Code|Result
 ---|---|---|---|---|---
 Card Reader|Kingston|MobileLite Plus microSD Reader|N/A|MobileLite Plus microSD Reader / MLPM|:heavy_check_mark:Passed
@@ -176,13 +196,9 @@ SSD|SanDisk|Extreme Pro Portable SSD|2TB|SDSSDE81-2T00-G25|:x:Failed
 DIY SSD|Western Digital &<br>ORICO|WD Blue SN550 NVMe SSD &<br>M.2 SSD Enclosure|1TB|WDS100T2B0C &<br>ORICO TCM2M-C3|:x:Failed
 DIY SSD|Western Digital &<br>ORICO|WD Blue SATA SSD 2.5”/7mm cased &<br>2.5 inch Transparent Type-C Hard Drive Enclosure|2TB|WDS200T2B0A &<br>ORICO 2139C3|:heavy_check_mark:Passed
 
-# Ejecting disks
+## Warning
 
-* While scanning, copying (including the cancel confirming) and deleting, do not eject the disks operating.
-* While SMB server working, do not eject any disk mounted.
-* It's ok to unplug the source disk / SD card reader / SD card directly before source scanning, after copying and after deletion.
-* It's ok to unplug the target disk before target scanning, after copying and after deletion.
-* In other cases, unplugging the disk directly will not damage the files in the device, but may cause the copying or deletion process to be unable to continue.
+We found some highend disks, like [SanDisk Extreme Pro Portable SSD (E81)](https://shop.westerndigital.com/products/portable-drives/sandisk-extreme-pro-usb-3-2-ssd), cannot work with Raspberry Pi, including Pi OS and Ubuntu. The file system of the target will be destroyed when writing files to an unsupported disk. Do a test copy before use it is hightly recommended.
 
 # Flow
 [Flow](Flow) folder contains the work flow description of SDCopy app, in png and Visio format.
