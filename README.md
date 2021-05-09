@@ -4,9 +4,9 @@ This repo contains the tech file of SDCopy to be viewed publicly.
 
 ## Content
 * Functions
-  * Main functions
-  * Helpers
-  * Additional
+  * [Main functions](#main-functions)
+  * [Helpers](#helpers)
+  * [Additional](#additional)
 * License policy
 * Supported OS
 * Install
