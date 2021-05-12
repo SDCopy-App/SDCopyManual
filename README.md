@@ -13,7 +13,7 @@ This repo contains tech files of SDCopy to be viewed publicly.
   * [Steps to install using pre-built image](#steps-to-install-using-pre-built-image)
   * [Steps to install this app manually](#steps-to-install-this-app-manually)
 * [Steps to prepare the target disk](#steps-to-prepare-the-target-disk)
-* [Ejecting disks](#ejecting-disks)
+* [Unplug disks](#unplug-disks)
 * [Tested devices](#tested-devices)
 * [Flow](#flow)
 * [Copyright](#copyright)
@@ -176,10 +176,10 @@ Finally, run this command to start the app: ```sudo systemctl start SDCopy.servi
 1. Format the disk with supported file system, like exFAT.
 1. Put a folder in disk named ```Target```.
 
-# Ejecting disks
+# Unplug disks
 
-* While scanning, copying (including the cancel confirming) and deleting, do not eject the disks operating.
-* While SMB server working, do not eject any disk mounted.
+* While scanning, copying (including the cancel confirming) and deleting, do not unplug the disks operating.
+* While SMB server or File Browser working, do not unplug any disk mounted.
 * It's ok to unplug the source disk / SD card reader / SD card directly before source scanning, after copying and after deletion.
 * It's ok to unplug the target disk before target scanning, after copying and after deletion.
 * In other cases, unplugging the disk directly will not damage the files in the device, but may cause the copying or deletion process to be unable to continue.
