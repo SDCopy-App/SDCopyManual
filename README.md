@@ -1,6 +1,6 @@
 # SDCopy Manual
 
-This repo contains tech files of SDCopy to be viewed publicly.
+This repo contains tech files of SDCopy to be viewed publicly. No SDCopy binary or image file included.
 
 ## Content
 * Functions
