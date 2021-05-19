@@ -35,7 +35,7 @@ SambaSharePoint<br>OtherFormat|The format of the share name of device. ```{0}```
 StartSambaCommand|The command to start smbd after configuration set. The default value is restarting smbd instead.|systemctl restart smbd
 StopSambaCommand|The command to stop smbd after configuration removed. The default value is restarting smbd instead.|systemctl restart smbd
 FileBrowser<br>MountPointFormat|The format of the path as mounting point of device other than source and target in file browser. ```{0}``` is the device name. Those folders will be created while file server mounting and will be removed after unmounted.|/tmp/SDCopySMBMounting-{0}
-GetPathDevice<br>CommandFormat|The command to get the device of a folder or file specified by path. ```{0}``` is the path.|df -P -- "{0}"
+GetPathDevice<br>Command|The command to get all mounting points of devices.|cat /proc/mounts
 CopyBlockLength|The size of the block for each reading and writing while file copying. Integer value.|262144
 StreamBufferLength|The size of the stream buffer for disk I/O. Integer value.|262144
 ExtendTargetFile<br>BeforeCopying|Whether extend the length of the target file to match the source before writing data. Boolean value.|false
