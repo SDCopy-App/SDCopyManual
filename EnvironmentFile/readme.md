@@ -47,6 +47,7 @@ WpaSupplicantApply<br>CommandFormat|The format of the command to apply the curre
 NetplanConfFolder|The path to the conf folder of netplan.|/etc/netplan
 NetplanConfFile|The file name to store the network setting created by SDCopy for netplan.|99-SDCopy.yaml
 NetplanApply<br>Command|The command to apply the current setting of netplan.|netplan apply
+FolderDeletion<br>MaxWaiting|The max waiting time (milliseconds) after folder deletion submitted. If a folder cannot be removed within this period of time after the delete operation is issued, an error will be reported.|10000
 BashPath|The path to the ```bash shell```.|/bin/bash
 BashArgumentFormat|The format of the argument of the bash to run commands. ```{0}``` is the command to be run.|-c \"{0}\"
 Mount<br>CommandFormat|The format of the command to mount. ```{0}``` is the device, ```{1}``` is the mouting point.|mount {0} {1}
