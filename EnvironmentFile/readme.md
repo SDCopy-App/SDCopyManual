@@ -72,7 +72,6 @@ SetDateTimeManually<br>Command|The command to set the Ntp off.|timedatectl set-n
 SetDateTimeWithNtp<br>Command|The command to set the Ntp on.|timedatectl set-ntp 1
 SetScript<br>ExecutePermission<br>CommandFormat|The format of the command to give a file executing permission. ```{0}``` is the path to the file.|chmod +x {0}
 Decompress<br>CommandFormat|The format of the command to decompress a ```tar.gz``` file to the working folder. ```{0}``` is the path to the ```tar.gz``` file.|tar zxvf {0}
-GetPathDevice<br>CommandFormat|The format of command to get the device of a file or folder. ```{0}``` is the path to the file or folder.|df -P -- "{0}"
 LicenseFiles|The paths to the license files. The first one is used as the target when writing required.|/etc/SDCopy.lic;<br>/boot/SDCopyLicense.txt;<br>/boot/SDCopyLicense.txt.txt;<br>/boot/firmware/SDCopyLicense.txt;<br>/boot/firmware/SDCopyLicense.txt.txt
 UpdateTempFolder|The path of the temporary folder for app updating. The folder specified by the path will be created or cleaned while app starting.|/tmp/SDCopyUpdate
 UserCommandText1|Text of the user command 1.|Reboot
